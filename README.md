@@ -112,8 +112,8 @@ python build.py
 
 - 搜索索引在构建时生成 `dist/search-index.js`（`window.FENG_SEARCH_INDEX = [...]`），搜索页按需加载，不依赖后端和 fetch。
 - 同时生成 `feed.xml`、`sitemap.xml`、`_headers` 和 `404.html`。
-- 部署：把 `dist/` 原样上传到任意静态托管（Cloudflare Pages / GitHub Pages / Nginx / 对象存储）。用 Cloudflare Pages 时构建命令填 `python build.py`，输出目录填 `dist`。
-- 目标域名是 `invest.fengyuwang.com`。注意：主站 `fengyuwang_com` 的 `DECISION-0001` 明文规定「不做独立子域部署」，启用该子域需要先立 `DECISION-0002` 并获站长批准。本仓库只负责生成静态产物，不改变主站决策。
+- 部署：把 `dist/` 原样上传到任意静态托管（Cloudflare Pages / GitHub Pages / Nginx / 对象存储）。
+- 线上目标：Cloudflare Pages 项目 `invest-fyw-com`，域名 `invest.fengyuwang.com`。两种接法见 [DEPLOY.md](DEPLOY.md)。
 
 ---
 
