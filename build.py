@@ -690,9 +690,27 @@ def entry_card(url: str, title: str, summary: str, meta: str = "") -> str:
     )
 
 
+_ASSET_VER = ""
+
+
+def asset_version() -> str:
+    """资源内容指纹：改了 CSS/JS 就换 query，避免浏览器或 CDN 一直用旧文件。"""
+    global _ASSET_VER
+    if not _ASSET_VER:
+        digest = hashlib.sha256()
+        for path in (ASSETS_SRC / "css" / "tokens.css",
+                     ASSETS_SRC / "css" / "style.css",
+                     ASSET_DIR / "site.css",
+                     ASSET_DIR / "reader.js"):
+            digest.update(path.read_bytes())
+        _ASSET_VER = digest.hexdigest()[:8]
+    return _ASSET_VER
+
+
 def page(title: str, desc: str, section: str, body: str, active: str, canonical: str) -> str:
     template = (TPL_DIR / "base.html").read_text(encoding="utf-8")
     values = {
+        "ASSET_VER": asset_version(),
         "TITLE": title,
         "DESC": desc,
         "SECTION": section,

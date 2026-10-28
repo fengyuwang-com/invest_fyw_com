@@ -375,3 +375,13 @@ html[data-fs="l"] .report-reader .md-content li { font-size: 18px; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* 侧栏 logo：标题加「投资库」字样后容易换行，锁死单行并收一点字号 */
+.sidebar-logo {
+  font-size: 16px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sidebar-logo span { font-size: 16px; }

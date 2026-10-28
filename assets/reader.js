@@ -25,6 +25,8 @@
   });
   if (main) {
     main.addEventListener('click', function (e) {
+      // 展开按钮本身在 main 里，不能让它刚打开就被这个监听器关掉
+      if (e.target.closest('#menuToggle')) return;
       if (sidebar && sidebar.classList.contains('open') && !sidebar.contains(e.target)) closeSidebar();
     });
   }
