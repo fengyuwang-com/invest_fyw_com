@@ -1,0 +1,166 @@
+{
+  "site": {
+    "name": "FengInvest 研究库",
+    "short_name": "FengInvest",
+    "base_url": "https://invest.fengyuwang.com",
+    "description": "买公司，不看报价。公司报告、知识库、思想、讨论与投资家列传。",
+    "disclaimer": "本站为个人研究记录，仅供学习与讨论，不构成任何投资建议。数据可能过时，结论仅代表撰写时点的判断，据此操作风险自负。"
+  },
+  "reports": {
+    "include": [
+      "content/060-companies/*/*/07-report.md"
+    ],
+    "exclude": []
+  },
+  "knowledge": [
+    {
+      "category": "discipline",
+      "label": "纪律",
+      "desc": "不做什么，比做什么更重要。",
+      "items": [
+        {
+          "path": "content/knowledge/discipline/2638法則.md",
+          "slug": "2638-rule"
+        },
+        {
+          "path": "content/knowledge/discipline/买分歧卖共识.md",
+          "slug": "buy-divergence-sell-consensus"
+        },
+        {
+          "path": "content/knowledge/discipline/双账户制.md",
+          "slug": "dual-account"
+        },
+        {
+          "path": "content/knowledge/discipline/后发制人.md",
+          "slug": "late-mover"
+        },
+        {
+          "path": "content/knowledge/discipline/奇衡卖出艺术.md",
+          "slug": "selling-art"
+        },
+        {
+          "path": "content/knowledge/discipline/年线法则.md",
+          "slug": "annual-line"
+        },
+        {
+          "path": "content/knowledge/discipline/钱仓滚存.md",
+          "slug": "capital-rollover"
+        }
+      ]
+    },
+    {
+      "category": "methodology",
+      "label": "方法",
+      "desc": "怎么研究，怎么验证。",
+      "items": [
+        {
+          "path": "content/knowledge/methodology/backtest-methodology.md",
+          "slug": "backtest-methodology"
+        },
+        {
+          "path": "content/knowledge/methodology/backtest-param-verification-2026-08-16.md",
+          "slug": "backtest-param-verification"
+        },
+        {
+          "path": "content/knowledge/methodology/literature-conclusions.md",
+          "slug": "literature-conclusions"
+        },
+        {
+          "path": "content/knowledge/methodology/literature-map.md",
+          "slug": "literature-map"
+        },
+        {
+          "path": "content/knowledge/methodology/rule-literature-map.md",
+          "slug": "rule-literature-map"
+        },
+        {
+          "path": "content/knowledge/methodology/speculative-masters-map.md",
+          "slug": "speculative-masters-map"
+        }
+      ]
+    },
+    {
+      "category": "principles",
+      "label": "原则",
+      "desc": "坐标、家国、息价、取舍。",
+      "items": [
+        {
+          "path": "content/knowledge/principles/取舍原则.md",
+          "slug": "tradeoff"
+        },
+        {
+          "path": "content/knowledge/principles/坐标原则.md",
+          "slug": "coordinate"
+        },
+        {
+          "path": "content/knowledge/principles/家国原则.md",
+          "slug": "home-country"
+        },
+        {
+          "path": "content/knowledge/principles/息价原则.md",
+          "slug": "yield-price"
+        }
+      ]
+    },
+    {
+      "category": "strategy",
+      "label": "策略",
+      "desc": "仓位、缓冲、再平衡。",
+      "items": [
+        {
+          "path": "content/knowledge/strategy/01-现金缓冲与暴跌加仓.md",
+          "slug": "cash-buffer"
+        },
+        {
+          "path": "content/knowledge/strategy/02-年线减仓纪律.md",
+          "slug": "annual-line-trim"
+        },
+        {
+          "path": "content/knowledge/strategy/03-持仓结构八到十二只.md",
+          "slug": "portfolio-8-12"
+        },
+        {
+          "path": "content/knowledge/strategy/04-半仓法.md",
+          "slug": "half-position"
+        },
+        {
+          "path": "content/knowledge/strategy/05-再平衡年度校准.md",
+          "slug": "annual-rebalance"
+        }
+      ]
+    }
+  ],
+  "thoughts": {
+    "label": "思想",
+    "desc": "整套系统背后的那套底层逻辑。",
+    "items": [
+      {
+        "path": "content/knowledge/奇衡思想总纲.md",
+        "slug": "qiheng-outline",
+        "title": "奇衡思想总纲"
+      },
+      {
+        "path": "content/knowledge/关注领域.md",
+        "slug": "focus-domains",
+        "title": "关注领域"
+      }
+    ]
+  },
+  "discussions": {
+    "include": [
+      "content/Discussion/*.md"
+    ],
+    "exclude": [
+      "content/Discussion/README.md"
+    ]
+  },
+  "masters": {
+    "include": [
+      "content/040-people/named/*.md"
+    ]
+  },
+  "personal": {
+    "include": [],
+    "note": "个人知识默认不入公开站；《投资血泪史》已明确排除。若将来要发其他个人笔记，逐篇加入本清单。"
+  }
+}

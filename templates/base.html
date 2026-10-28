@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESC}}">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESC}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <link rel="alternate" type="application/rss+xml" title="{{SITE_NAME}}" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('feng_theme');
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      var f = localStorage.getItem('feng_fs');
+      if (f) document.documentElement.setAttribute('data-fs', f);
+    })();
+  </script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <div class="layout">
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-logo">
+          <img src="/assets/img/logo.svg" alt="" width="26" height="26">
+          <span>{{SITE_NAME}}</span>
+        </a>
+        <button class="sidebar-toggle" type="button" id="sidebarToggle" aria-label="关闭目录">✕</button>
+      </div>
+      <ul class="sidebar-nav">{{NAV}}</ul>
+      <div class="sidebar-foot">买公司，不看报价</div>
+    </nav>
+
+    <main class="main-content" id="mainContent">
+      <div class="topbar">
+        <button class="menu-toggle" type="button" id="menuToggle" aria-label="展开目录">☰</button>
+        <span class="topbar-title">{{SECTION}}</span>
+        <span class="topbar-spacer"></span>
+        <button class="theme-btn" type="button" id="themeBtn" title="亮色 / 暗色" aria-label="切换主题">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
+        </button>
+        <a class="icon-link" href="/search.html" title="搜索" aria-label="搜索">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+
+      {{BODY}}
+
+      <footer class="site-footer">
+        <p>{{DISCLAIMER}}</p>
+        <p class="footer-meta">
+          <a href="/about.html">关于本站</a>
+          <span>·</span>
+          <a href="/feed.xml">RSS</a>
+          <span>·</span>
+          <a href="/sitemap.xml">Sitemap</a>
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <nav class="bottom-nav">{{BOTTOMNAV}}</nav>
+  <script src="/assets/reader.js"></script>
+</body>
+</html>
