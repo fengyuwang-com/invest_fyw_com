@@ -2,6 +2,8 @@
 
 目标：`https://invest.fengyuwang.com`，静态只读，无后端、无数据库、无运行时。
 
+**当前状态（2026-10-27）**：Pages 项目 `invest-fyw-com` 已发布，线上地址 <https://invest-fyw-com.pages.dev>。`invest.fengyuwang.com` 已在 Pages 侧挂上但状态 `pending`，缺一条 DNS：CNAME `invest` → `invest-fyw-com.pages.dev`（Proxied 开启）。
+
 站内产物是纯静态文件，Cloudflare Pages 只是托管它。两条路，选一条。
 
 ---
@@ -42,6 +44,11 @@ npx wrangler whoami      # 确认账号与权限
 ```
 
 自定义域同样在 Dashboard → 项目 → Custom domains 里加。用命令行加域需要一个带 `zone:edit` 权限的 API Token，OAuth 登录的默认权限不含这一项，所以域名这一步走 Dashboard 更省事。
+
+### 两个 Cloudflare 坑（实测）
+
+- **反爬按 User-Agent 拦截脚本**：用 `urllib`/`curl` 默认 UA 调 `dash.cloudflare.com` 或 `api.cloudflare.com` 会拿到 `403 error code 1010`。脚本里换 token、调 API 都要带浏览器 UA。
+- **`wrangler login` 只等约两分钟**：它的本地回调服务超时即退出，之后再点授权链接只会落到没人监听的 `localhost:8976`（页面空白或提示过期）。需要慢慢点的话，自己起一个常驻的 PKCE 接收端替代。
 
 ---
 
