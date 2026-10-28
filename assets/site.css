@@ -385,3 +385,11 @@ html[data-fs="l"] .report-reader .md-content li { font-size: 18px; }
   gap: 8px;
 }
 .sidebar-logo span { font-size: 16px; }
+
+/* 侧栏加到 240px：logo 与关闭按钮之间留呼吸感（原 220px 偏挤） */
+.sidebar { width: 240px; }
+@media (min-width: 769px) {
+  .main-content.sidebar-open {
+    margin-left: calc(240px + max(0px, (100% - 240px - 1200px) / 2));
+  }
+}
